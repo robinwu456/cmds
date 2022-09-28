@@ -1,4 +1,7 @@
 #!/bin/bash
 
-echo $1
-echo $2
+[ ! $# -eq 2 ] && echo -e "args error!\n\narg1=cmd\narg2=intervals time(s)" && exit 2
+
+while sleep $2; do
+	$1
+done
